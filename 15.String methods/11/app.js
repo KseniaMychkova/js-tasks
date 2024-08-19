@@ -5,6 +5,13 @@
 
 let str = prompt().trim();
 let strFirst = str.indexOf("bbb");
-let strLast = str.lastIndexOf("b");
+let strSlice = str.slice(strFirst)
 
-console.log(str.slice(strFirst, strLast));
+
+if (str.startsWith('bbb')) {
+    console.log(str.slice(0 + 'bbb'.length));
+} else {
+    let a = str.slice(0, strFirst);
+    let b = str.slice(strFirst + 'bbb'.length)
+    console.log(a + b);
+}

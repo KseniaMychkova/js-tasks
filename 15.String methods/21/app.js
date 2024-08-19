@@ -4,5 +4,7 @@
 // Входные: "OpenAI" → Результат: 4
 
 let a = prompt();
+let a1 = a.split('');
+
 
 console.log();
