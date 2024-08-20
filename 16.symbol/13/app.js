@@ -4,9 +4,8 @@
 // Входные: "This is one sentence." → Результат: 1 
 // Входные: "What's your name?MynameisJohn."→Результат:2
 
-let str = prompt();
-let strArr = str.split('.');
-let strArr2 = strArr.split('!');
-let strArr3 = strArr2.split('?');
+const str = prompt();
+const sentenceCount = str.split('.').length - 1 + str.split('?').length - 1 + str.split('!').length - 1;
 
-console.log(strArr3.length);
+
+console.log(sentenceCount);
