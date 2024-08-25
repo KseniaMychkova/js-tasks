@@ -3,3 +3,16 @@
 // Входные: 2 → Результат:
 // **********
 // **********
+
+const n = +prompt();
+const star = '**********\n'
+
+//1 способ
+console.log(star.repeat(n));
+
+//2 способ
+for (let i = 0; i <= n; i++) {
+    console.log(star.repeat(n));
+    break;
+
+}
