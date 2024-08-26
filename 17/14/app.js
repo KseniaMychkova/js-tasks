@@ -6,13 +6,14 @@
 
 const n = +prompt();
 const star = '**********\n'
+let add = '';
 
 //1 способ
-console.log(star.repeat(n));
+// console.log(star.repeat(n));
 
 //2 способ
-for (let i = 0; i <= n; i++) {
-    console.log(star.repeat(n));
-    break;
+for (let i = 0; i < n; i++) {
+    add += star;
 
 }
+console.log(add);

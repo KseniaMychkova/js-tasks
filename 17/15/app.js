@@ -5,13 +5,13 @@
 // Входные: "javascript language"→
 // Результат: "Javascript Language“
 
-const str = prompt();
+const str = prompt().split(' ');
 const strSecondWord = str.indexOf(' ') + 1;
 const strUpper = str[strSecondWord].toUpperCase();
+let add = '';
 
 
 for (let i = 0; i < str.length; i++) {
-    console.log(`${str[0].toUpperCase()}${str.slice(1, strSecondWord)}${strUpper}${str.slice(strSecondWord + 1)}`);
-    break;
-
+    add += `${str[i][0].toUpperCase()}${str[i].slice(1)} `
 }
+console.log(add);
