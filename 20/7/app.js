@@ -8,7 +8,7 @@
 const obj = {};
 
 for (let key in obj) {
-    if (obj.length == 0) {
+    if (obj.length === 0) {
         console.log(false);
     } else {
         console.log(true);
