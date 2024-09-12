@@ -8,9 +8,9 @@ const obj = {};
 
 const result = arr.filter(function(el, arr, i) {
     if (el % 2 === 0) {
-        return obj.arr[i] = true;
+        return obj[el] = true;
     } else {
-        return obj.arr[i] = false;
+        return obj[el] = false;
     }
 }, 0);
-console.log(result);
+console.log(obj);
