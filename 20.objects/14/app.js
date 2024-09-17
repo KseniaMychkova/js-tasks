@@ -3,13 +3,18 @@
 // Входные: [5, 5, 6, 6, 6, 7] → Результат: 6
 
 const arr = [1, 2, 3, 1, 2, 1];
-let result = 0;
-arr.sort();
+let obj = {};
+//let result = 0;
+//arr.sort();
 
 
-for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === arr[i + 1]) {
-        result++;
-    }
+for (let el of arr) {
+    obj[el] ? obj[el] += 1 : obj[el] = 1;
 }
-console.log(result);
+
+let num = -Infinity;
+
+for (let i in obj) {
+    num < obj[i] ? num = obj[i] : null;
+}
+console.log(num);
