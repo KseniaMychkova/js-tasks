@@ -10,10 +10,8 @@ function doArr(arrLength) {
 }
 doArr(arr)
 
-
-
 function doCount(arrLength) {
     return arrLength.length;
 }
-doCount(arr)
-console.log(doCount(arr));
+const result = doCount(arr)
+console.log(result);

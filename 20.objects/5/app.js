@@ -2,11 +2,11 @@
 // числами.
 // Входные: { "1": "a", "3": "b", "4": "c" }→
 // Результат: ["1", "3"]
+
 const obj = { "1": "a", "3": "b", "4": "c" };
-const result = [];
+const arr = [];
+
 for (let key in obj) {
-    if (key % 2 !== 0) {
-        result.push(key);
-    }
+    key % 2 !== 0 ? arr.push(key) : null;
 }
-console.log(result);
+console.log(arr);

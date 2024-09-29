@@ -10,7 +10,5 @@ for (let i = 0; i < n; i++) {
     arr.push(prompt('Введите элементы массива'));
 }
 
-const result_some = arr.some(function(el) {
-    return el > 0 ? true : false;
-})
+const result_some = arr.some((el) => el > 0 ? true : false);
 console.log(result_some);

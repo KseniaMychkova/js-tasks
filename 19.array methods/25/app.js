@@ -6,12 +6,18 @@
 
 let n = prompt('Введите колтчество элементов массива');
 let arr = [];
+let newArr = []
 
 for (let i = 0; i < n; i++) {
-    arr.push(prompt('Введите элементы массива'));
+    arr.push(prompt('Введите элементы'));
 }
 
-const result_map = arr.map(function(el) {
-    return el.length;
+arr.forEach(function(el) {
+    newArr.push(el.length)
 })
-console.log(result_map);
+console.log(newArr);
+
+// const result_map = arr.map(function(el) {
+//     return el = el.length
+// })
+// console.log(result_map);

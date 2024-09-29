@@ -5,10 +5,25 @@
 //  Входные: [2, 4, 6] → Результат: '-2-4-6-'
 //  Входные: [0] → Результат: '-0-’
 
-const n = 10;
-let arr = [];
+let n = prompt('Введите количество элеметов массива');
+const arr = [];
 
-for (let i = 0; i < n; i++) {
-    arr.push(prompt());
+// for (let i = 0; i < n; i++) {
+//     arr.push(prompt('Введите элементы массива'))
+// }
+// console.log(arr.join('-'));
+
+// let i = 0
+// while (i < n) {
+//     i++
+//     arr.push(prompt('Введите элементы массива'))
+// }
+// console.log(arr.join('-'));
+
+let i = 0
+do {
+    arr.push(prompt('Введите элементы массива'))
+    i++
 }
-console.log(`-${arr.join('-')}`);
+while (i < n)
+console.log(arr.join('-'));
