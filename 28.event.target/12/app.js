@@ -7,27 +7,61 @@
 
 const left = document.querySelector('#prevButton')
 const right = document.querySelector('#nextButton')
-const container = document.querySelectorAll('#sliderContainer img')
+    // const container = document.querySelectorAll('#sliderContainer img')
+const image = document.querySelector('#sliderContainer img')
 let curentImageIndex = 0
 
+
+// 2 вариант 
+
+const data = [{
+    index: 0,
+    path: './a.jpg',
+}, {
+    index: 0,
+    path: './b.jpg',
+}, {
+    index: 0,
+    path: './c.jpg',
+}]
+
 right.addEventListener('click', () => {
-    // if (curentImageIndex >= container.length - 1) return;
-    curentImageIndex++
-    container.forEach((el, i) => {
-        el.style = 'display:none'
-        if (i === curentImageIndex) el.style = 'display:block; width: 300px'
-    })
-    if (curentImageIndex === container.length - 1)
-        curentImageIndex = -1
+    if (curentImageIndex >= data.length - 1) curentImageIndex = 0
+    else curentImageIndex++
+
+        image.src = data[curentImageIndex].path
 })
 
 left.addEventListener('click', () => {
-    // if (curentImageIndex <= 0) return;
-    curentImageIndex--
-    container.forEach((el, i) => {
-        el.style = 'display:none'
-        if (i === curentImageIndex) el.style = 'display:block; width: 300px'
-    })
-    if (curentImageIndex < container.length - 2)
-        curentImageIndex = container.length
+    if (curentImageIndex <= 0) curentImageIndex = data.length - 1
+    else curentImageIndex--
+
+        image.src = data[curentImageIndex].path
 })
+
+// 1 вариант
+
+// right.addEventListener('click', () => {
+//     if (curentImageIndex >= container.length - 1) {
+//         curentImageIndex = 0
+//     } else {
+//         curentImageIndex++
+//     }
+//     container.forEach((el, i) => {
+//         el.style = 'display:none'
+//         if (i === curentImageIndex) el.style = 'display:block; width: 300px'
+//     })
+// })
+
+// left.addEventListener('click', () => {
+//     if (curentImageIndex <= 0) {
+//         curentImageIndex = container.length - 1;
+//     } else {
+//         curentImageIndex--
+//     }
+//     container.forEach((el, i) => {
+//         el.style = 'display:none'
+//         if (i === curentImageIndex) el.style = 'display:block; width: 300px'
+//     })
+
+// })
