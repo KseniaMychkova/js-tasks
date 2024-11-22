@@ -5,12 +5,12 @@ const obj_book_20 = [
     { id: 3, name: 'Машины-помощники', price: 30, count: 300 },
     { id: 4, name: 'Титан', price: 90, count: 301 },
 ];
-let result_20 = '';
-let test_count = 0;
-obj_book_20.forEach((el) => {
-    if (el.count > test_count) {
-        test_count = el.count;
-        result_20 = el.name;
+let count_20 = 0;
+let name_20 = '';
+for (let i = 0; i < obj_book_20.length; i++) {
+    if (obj_book_20[i].count > count_20) {
+        count_20 = obj_book_20[i].count;
+        name_20 = obj_book_20[i].name;
     }
-});
-console.log(result_20);
+}
+console.log(name_20);

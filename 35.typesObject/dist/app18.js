@@ -5,9 +5,9 @@ const arr_of_obj_18 = [
     { id: 3, author: 'Булгаков', name: 'Мастер и маргарита', price: 30 },
     { id: 4, author: 'Драйзер', name: 'Титан', price: 90 },
 ];
-let result_18 = '';
-arr_of_obj_18.forEach(el => {
-    if (el.author === 'Булгаков')
-        result_18 = el.name;
-});
-console.log(result_18);
+let name_book = '';
+for (let i = 0; i < arr_of_obj_18.length; i++) {
+    if (arr_of_obj_18[i].author === 'Булгаков')
+        name_book = 'Мастер и маргарита';
+}
+console.log(name_book);
