@@ -1,0 +1,38 @@
+// 3. Создайте интерфейс iAccount соследующимиметодами: • balance: хранит цисловое значение баланса света • getBalance():возвращаеттекущийбаланссчета • deposit(amount: number): пополняет счет на указанную сумму • withdraw(amount: number):снимаетуказаннуюсуммусосчета Реализуйте класс Account, который имплементирует интерфейс iAccount. Реализуйте всеметоды интерфейса. Перед снятием withdraw проверяйте, достаточно ли средств на счете. Если средств недостаточно, выбрасывайте ошибку.
+
+interface iAccount {
+    balance: number;
+    getBalance(): number;
+    getDeposit(a: number): number;
+    withdraw(b: number): number | string;
+
+}
+
+class Account implements iAccount {
+    balance: number = 200;
+
+    getBalance(): number {
+        return this.balance
+    };
+
+    getDeposit(a: number): number {
+        this.balance = this.balance + a
+        return this.balance
+
+    };
+
+    withdraw(b: number): number | string {
+        if (b < this.balance) {
+            this.balance = this.balance - b
+            return this.balance
+        }
+        else {
+            return 'Баланс счета недостаточен'
+        }
+    };
+}
+
+const account = new Account()
+console.log(account.getBalance());
+console.log(account.getDeposit(+prompt()));
+console.log(account.withdraw(+prompt()));
